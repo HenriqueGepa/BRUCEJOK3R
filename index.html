@@ -11,13 +11,18 @@
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            overflow: hidden;
+            /* overflow: hidden; */ /* Removido para permitir rolagem em telas menores */
         }
         .slide {
             min-height: 100vh;
-            min-width: 100vw;
+            width: 100%; /* Alterado de min-width para width */
             display: none;
-            padding: 2rem 4rem;
+            padding: 4rem 1.5rem; /* Padding ajustado para mobile */
+        }
+        @media (min-width: 768px) { /* md: */
+            .slide {
+                padding: 2rem 4rem; /* Padding original para telas maiores */
+            }
         }
         .slide.active {
             display: flex;
@@ -46,32 +51,32 @@
         <!-- Slide 1: Capa -->
         <div id="slide-1" class="slide active bg-joker-dark flex-col justify-center items-center text-center">
             <div class="slide-content">
-                <h1 class="text-7xl md:text-9xl font-black uppercase">BRUCEJOK<span class="joker-purple">3</span>R</h1>
-                <h2 class="text-2xl md:text-4xl font-semibold mt-4">Mídia Kit Profissional 2025</h2>
-                <p class="text-xl md:text-2xl mt-2 text-gray-400">Conexão Autêntica. Alcance Exponencial.</p>
+                <h1 class="text-5xl md:text-8xl lg:text-9xl font-black uppercase">BRUCEJOK<span class="joker-purple">3</span>R</h1>
+                <h2 class="text-xl md:text-3xl lg:text-4xl font-semibold mt-4">Mídia Kit Profissional 2025</h2>
+                <p class="text-lg md:text-xl lg:text-2xl mt-2 text-gray-400">Conexão Autêntica. Alcance Exponencial.</p>
             </div>
         </div>
 
         <!-- Slide 2: O Desafio do Mercado -->
         <div id="slide-2" class="slide bg-joker-dark flex-col justify-center items-center text-center">
             <div class="slide-content">
-                <h2 class="text-4xl md:text-6xl font-bold text-white">O público não quer mais ser interrompido.</h2>
-                <p class="text-2xl md:text-3xl mt-4 text-gray-400">Ele quer fazer parte da conversa. A publicidade tradicional perdeu espaço para a <span class="font-bold text-joker-purple">conexão genuína</span>.</p>
+                <h2 class="text-3xl md:text-5xl lg:text-6xl font-bold text-white">O público não quer mais ser interrompido.</h2>
+                <p class="text-xl md:text-2xl lg:text-3xl mt-4 text-gray-400">Ele quer fazer parte da conversa. A publicidade tradicional perdeu espaço para a <span class="font-bold text-joker-purple">conexão genuína</span>.</p>
             </div>
         </div>
 
         <!-- Slide 3: A Solução: Quem é BRUCEJOK3R? -->
         <div id="slide-3" class="slide bg-joker-dark flex-col justify-center items-center">
             <div class="slide-content">
-                <h2 class="text-4xl md:text-5xl font-bold text-center mb-12">A Solução: Um Influenciador Versátil.</h2>
+                <h2 class="text-3xl md:text-5xl font-bold text-center mb-12">A Solução: Um Influenciador Versátil.</h2>
                 <div class="grid md:grid-cols-2 gap-8">
-                    <div class="border border-gray-700 rounded-lg p-8">
-                        <h3 class="text-3xl font-bold mb-4 joker-purple">O Atleta de Elite</h3>
-                        <p class="text-lg text-gray-300">Faixa preta de Jiu-Jitsu, Bruce inspira uma comunidade com conteúdo sobre <span class="font-semibold text-white">disciplina, artes marciais e lifestyle fitness</span>, representando performance e superação.</p>
+                    <div class="border border-gray-700 rounded-lg p-6 md:p-8">
+                        <h3 class="text-2xl md:text-3xl font-bold mb-4 joker-purple">O Atleta de Elite</h3>
+                        <p class="text-base md:text-lg text-gray-300">Faixa preta de Jiu-Jitsu, Bruce inspira uma comunidade com conteúdo sobre <span class="font-semibold text-white">disciplina, artes marciais e lifestyle fitness</span>, representando performance e superação.</p>
                     </div>
-                    <div class="border border-gray-700 rounded-lg p-8">
-                        <h3 class="text-3xl font-bold mb-4 joker-purple">O Comunicador Carismático</h3>
-                        <p class="text-lg text-gray-300">Com um traquejo social único, ele transita com naturalidade de <span class="font-semibold text-white">grandes eventos e festas</span> a lives de entretenimento, criando conexões autênticas e divertidas.</p>
+                    <div class="border border-gray-700 rounded-lg p-6 md:p-8">
+                        <h3 class="text-2xl md:text-3xl font-bold mb-4 joker-purple">O Comunicador Carismático</h3>
+                        <p class="text-base md:text-lg text-gray-300">Com um traquejo social único, ele transita com naturalidade de <span class="font-semibold text-white">grandes eventos e festas</span> a lives de entretenimento, criando conexões autênticas e divertidas.</p>
                     </div>
                 </div>
             </div>
@@ -210,11 +215,11 @@
         <!-- Slide 10: Contato -->
         <div id="slide-10" class="slide bg-joker-dark flex-col justify-center items-center text-center">
             <div class="slide-content">
-                <h2 class="text-5xl md:text-7xl font-bold">Vamos Construir Algo Incrível Juntos.</h2>
-                <p class="text-xl text-gray-400 mt-4 mb-8">Agende uma conversa e vamos criar um plano personalizado para sua marca.</p>
+                <h2 class="text-4xl md:text-6xl lg:text-7xl font-bold">Vamos Construir Algo Incrível Juntos.</h2>
+                <p class="text-lg md:text-xl text-gray-400 mt-4 mb-8">Agende uma conversa e vamos criar um plano personalizado para sua marca.</p>
                 <div class="inline-block">
-                    <a href="https://wa.me/5515996571639" target="_blank" class="bg-joker-purple text-white font-bold py-4 px-10 rounded-full text-xl hover:bg-purple-800 transition-colors inline-block">Agendar Reunião</a>
-                    <p class="mt-6 text-lg text-gray-300">Contato: (15) 99657-1639</p>
+                    <a href="https://wa.me/5515996571639" target="_blank" class="bg-joker-purple text-white font-bold py-3 px-8 md:py-4 md:px-10 rounded-full text-lg md:text-xl hover:bg-purple-800 transition-colors inline-block">Agendar Reunião</a>
+                    <p class="mt-6 text-base md:text-lg text-gray-300">Contato: (15) 99657-1639</p>
                 </div>
             </div>
         </div>
